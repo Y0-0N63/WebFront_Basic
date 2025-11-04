@@ -9,16 +9,12 @@
       background-color: skyblue;
     }
 
-    tbody th {
+    tbody th, tfoot th {
       background-color: pink;
     }
 
     tbody td {
       background-color: orange;
-    }
-
-    tfoot th {
-      background-color: pink;
     }
 
     tfoot td {
@@ -30,7 +26,7 @@
   <table border="1px" class="tb">
     <thead>
       <tr>
-        <th colspan="5">조미현 컬렉션</th>
+        <th colspan="5">컬렉션</th>
       </tr>
     </thead>
 
@@ -75,6 +71,25 @@
       <td>800,000원</td>
       <td>3786</td>
     </tfoot>
+  </table>
+
+  <hr>
+
+  <table border="1px">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td rowspan="2">3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td colspan="2">5</td>
+      <td rowspan="2">6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td colspan="2">8</td>
+    </tr>
   </table>
 </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_입력 관련 태그</title>
+</head>
+<body>
+  <h1>input 태그</h1>
+
+  <h2>input 태그</h2>
+  <p>
+    웹 문서에서 사용자가 입력할 수 있는 양식을 제공하는 태그
+  </p>
+
+  <h3>text 관련된 input 태그</h3>
+
+  <h4>type = "text"</h4>
+
+  <pre>
+- 한 줄짜리 문자열(텍스트)을 입력할 수 있는 입력 상자
+- input 태그의 type의 기본값으로, 생략 가능
+- inline 형식 (모든 input 태그가 inline)
+  </pre>
+
+  <input type="text">
+
+<pre>
+  <h3>text 관련 input 태그의 공용 속성</h3>
+- size : 입력 상자 크기
+- maxlength : 입력 받는 텍스트의 최대 길이
+- placeholder : 입력 상자에 작성될 내용 설명
+</pre>
+
+<input type="text" size="15" placeholder="아이디 입력">
+
+<hr>
+
+<h4>type = "password</h4>
+<p>비밀번호 입력 상자 (단순히 입력되는 텍스트를 가려줌)</p>
+
+비밀번호 : <input type="password">
+
+<hr>
+
+<h4>type = "url"</h4>
+<p>주소 입력 시 사용하는 입력 상자</p>
+홈페이지 : <input type="url" value="https://">
+<!-- value : 모든 input 태그의 type에서 사용 가능한 속성 > input 태그에 미리 들어갈 초기값 지정 -->
+
+<hr>
+
+<h4>type = "tel"</h4>
+<p>전화번호 입력 시 사용하는 입력 상자</p>
+전화번호 : <input type="tel" placeholder="'-' 기호 포함">
+
+<hr>
+
+<h4>type = "email"</h4>
+이메일 : <input type="email">
+
+<!-- url, email, tel 단독 사용 시
+  : form 태그 내부에서 사용되면 type="text"와 달리 입력된 값이 용도에 맞는 값인지 검사 진행
+  단, tel은 유효한 전화번호 형식인지 검사하는 게 아니라, 모바일 환경에서 키패드를 켜준다는 특징이 있음 -->
+
+  <hr><hr><hr>
+  
+  <h3>숫자 관련 input 태그</h3>
+  
+  <pre>
+    <h3>숫자 관련 태그 공용 속성</h3>
+    - min : 최소값
+    - max : 최대값
+    - step : 증가/감소 단계 지정
+  </pre>
+  
+  <h4>type = "number"</h4>
+  <p>숫자만 입력할 수 있는 입력 상자 <br>
+    브라우저에 따라 스핀박스가 표시되기도 함</p>
+    
+    점수 입력 : <input type="number" step="10" min="0" max="100">
+    
+    <hr>
+    
+    <h4>type = "range"</h4>
+    <p>사이드바를 이용해서 숫자 지정(단독 사용 X, JS와 함께 사용해야)</p>
+    <input type="range" min="0" max="50" step="10">
+    
+    <hr><hr><hr>
+    
+    <h3>날짜/시간 관련된 input 태그</h3>
+    
+    <input type="date"> <br>
+    <input type="month"> <br>
+    <input type="week"> <br>
+    <input type="time"> <br>
+    <input type="datetime-local">
+    
+    <hr><hr><hr>
+
+    <h3>radio와 checkbox</h3>
+    <pre>
+여러 관련된 값을 묶어서 선택하는 경우에 사용하는 type
+<strong style="color: red;">묶음으로 다루려는 input 태그들은 반드시 같은 name 속성값을 가져야 한다</strong>
+
+name 속성
+1) radio, checkbox 뿐만 아니라 input 태그들 중 관련된 것들을 묶어서 부를 때 사용 (== 그룹 이름)
+2) 서버쪽에 제출되는 input 태그 값의 이름 지정 (form 태그와 같이 사용)
+    </pre>
+
+    radio : <input type="radio"> <br>
+    checkbox : <input type="checkbox">
+
+    <h4>type = "radio"</h4>
+
+    <!-- label 태그 : 입력해야 할 내용을 설명하는 텍스트를 제공 (주로 radio, checkbox와 함께 사용)
+    for 속성 : 연결할 입력창의 id 속성과 일치하게끔 작성 > 입력창과 label을 연결해줌 -->
+    성별 선택 <br>
+    <label for = "male">남</label>
+    <input type="radio" name="gender" id="male">
+
+    <label for = "female">여</label>
+    <input type="radio" name="gender" id="female">
+</body>
+</html>
