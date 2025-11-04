@@ -121,5 +121,141 @@ name 속성
 
     <label for = "female">여</label>
     <input type="radio" name="gender" id="female">
+
+    <h4>type = "checkbox"</h4>
+    <h5>취미 선택</h5>
+    <label>야구 <input type="checkbox" name="hobby"></label>
+    <label>축구 <input type="checkbox" name="hobby"></label>
+    <label>농구 <input type="checkbox" name="hobby"></label>
+
+    <hr><hr><hr>
+    <h3>기타 input 태근</h3>
+    type = "color" : <input type="color"> <br>
+    type = "file" : <input type="file"> <br>
+    type = "hidden" : <input type="hidden" value="사용자">
+    <!-- 화면상에는 보이지 않지만 값은 존재하는 상태
+    form 태그 안에서 사용하면 화면상에는 보이지 않지만 서버로 value에 있는 값이 제출됨 -->
+
+    <hr><hr><hr>
+
+    <h1>form 태그</h1>
+    <pre>
+- div와 같은 영역 (block 형식)
+- 내부에 작성된 input 태그 값을 서버로 전달하는 역할
+
+[속성]
+1) action : 내부에 작성된 값을 전달할 서버 또는 페이지 주소를 작성 (미작성 시 기본값으로 현재 페이지의 URL 적용)
+2) name : form 태그의 이름을 지정하여 form 태그 구분(JS 사용)
+3) method(방식) : 서버로 데이터 전달하는 방식을 지정하는 속성
+- GET / POST 방식 지정 가능 (기본값 GET)
+4) target : action에 지정된 주소를 현재탭/새탭 중 어디에서 열지 지정
+    </pre>
+
+  <h3>form 예시 1</h3>
+
+  <!-- http://192.168.120.82:5500/1_HTML5/09_...8.html?userId=asdf&userPw=asdf1&secret=hello
+  : name 속성이 있는 곳에 입력된 값들이 서버에 전달됨
+  ?K=V&K=V...
+  - ? : 제출된 값을 나타내는 문자열의 시작 부분 
+  - userId, userPw... : input 태그에 작성해둔 name 속성값 (서버에 제출할 데이터 중 KEY) 
+  - asdf, asdf1... : input 창에 직접 입력한 값 (value 값, 서버에 제출할 데이터 중 VALUE 
+  -> name 속성값이 Key인 input 태그에 작성된 값 Value가 Get 방식으로 서버에 제출됨을 의미 -->
+  <form>
+    아이디 : <input type="text" name="userId"> <br>
+    비밀번호 : <input type="password" name="userPw"> <br>
+
+    <input type="hidden" value="hello" name="secret">
+
+    <!-- button 태그 : 클릭 가능한 버튼을 생성 > 폼 제출, JS와 연결된 기능 수행 역할
+    type 속성
+    - submit(기본값) : 폼 태그 내부에 작성되어있을 때, 클릭이 되면 input에 작성된 값을 모두 서버로 제출하는 역할
+    - reset : 입력창 안에 작성된 내용을 초기화하는 기능
+    - button : 아무 기능이 없는 버튼 (JS와 연결하여 사용)
+    -->
+    <button>제출</button>
+  </form>
+
+  <hr>
+
+  <h3>form 예시 2</h3>
+
+  <!-- type이 checkbox, radio인 경우 > value 속성값이 없으면 'on', 있으면 value 속성값으로 제출됨 -->
+  <form action="07_이미지_관련_태그.html" target="_blank" method="get">
+    <!-- http://192.168.120.82:5500/1_HTML5/07_....html?hobby=야구&hobby=on -->
+    <input type="checkbox" name="hobby" value="야구"> 야구
+    <input type="checkbox" name="hobby"> 축구
+    <input type="checkbox"> 농구
+
+    <button type="submit">제출</button>
+  </form>
+
+  <hr><hr><hr>
+  
+  <form>
+    <input>
+    <button type="reset">초기화</button>
+  </form>
+  
+  <br>
+  <button type="button" id="btn">그냥 버튼</button>
+
+  <h3>fieldset / legend</h3>
+  <pre>
+field : 테두리를 만들어 그룹을 구분하는 영역
+legend : fieldset 테두리에 이름을 붙이는 것
+  </pre>
+
+  <form>
+    <fieldset>
+      <legend>로그인 폼</legend>
+
+      아이디 : <input> <br>
+      비밀번호 : <input type="password">
+
+      <button>로그인</button>
+    </fieldset>
+  </form>
+
+  <hr><hr><hr>
+
+  <h3>textarea / select & option</h3>
+
+  <h3>textarea 태그 : 여러 줄을 입력하기 위한 입력 상자</h3>
+
+  <textarea rows="5" cols="70" style="resize: none;" placeholder="자기소개를 입력하세요..."></textarea>
+
+  <hr>
+
+  <h3>select 태그와 option 태그</h3>
+
+  <form>
+    <select name="test">
+      <!-- http://192.168.120.82:5500/1_HTML5/09_....html?test=1
+        select 제출 시 option 태그 안에 value 속성 값이 있으면 > value 속성 안에 작성된 값이 제출됨 -->
+      <option value="1">선택 1</option>
+      <option>선택 2</option>
+      <!-- selected 속성 : select의 기본값을 설정하는 속성 -->
+      <!-- http://192.168.120.82:5500/1_HTML5/09_....html?test=선택+3
+      select 제출 시 option 태그 안에 value 속성 값이 없으면 > <option></option> 사이에 작성된 콘텐트값이 제출됨-->
+      <option selected>선택 3</option>
+      <option>선택 4</option>
+      <!-- disabled 속성 : option을 비활성화(클릭 및 입력 불가) -->
+      <option disabled>선택 5</option>
+    </select>
+
+    <button>제출</button>
+  </form>
+
+  <!-- checked 속성 : checkbox/radio 기본적으로 체크해두는 속성 -->
+  <input type="checkbox" checked>
+  <input type="radio" checked>
+
+  <script>
+    // 자바스크립트 영역
+    document.getElementById("btn").addEventListener("click", function(){
+      alert("버튼 클릭됨");
+    });
+
+  </script>
 </body>
 </html>

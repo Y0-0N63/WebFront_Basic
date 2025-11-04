@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 연습 문제 1</title>
+</head>
+<body>
+  고객명 : <input type="text"> <br>
+  전화번호 : <input type="tel"> <br>
+  E-mail : <input type="email"> <br>
+  피자 선택 :
+  <select name="pizza">
+    <option>치즈 피자</option>
+    <option>시카고 피자</option>
+    <option>포테이토 피자</option>
+    <option>페퍼로니 피자</option>
+    <option>하와이안 피자</option>
+  </select>
+
+  <form>
+    <fieldset>
+      <legend>피자 사이즈</legend>
+      <label> <input type="radio" name="pizzaSize"> Small </label> <br> 
+      <label> <input type="radio" name="pizzaSize"> Medium </label> <br> 
+      <label> <input type="radio" name="pizzaSize"> Large </label> <br> 
+    </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend>토핑 선택</legend>
+      <label> <input type="checkbox" name="selectTopping"> 베이컨 </label> <br>
+      <label> <input type="checkbox" name="selectTopping"> 치즈 </label> <br>
+      <label> <input type="checkbox" name="selectTopping"> 양파 </label> <br>
+      <label> <input type="checkbox" name="selectTopping"> 버섯 </label> <br>
+    </fieldset>
+  </form>
+
+  희망배송시간 : <input type="time"> <br>
+  <br>
+  배송시 요청사항 :
+  <textarea rows="3"></textarea> <br>
+  <br>
+
+  <button id="btn">주문하기</button>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", function(){
+      alert("주문 완료!");
+    })
+  </script>
+</body>
+</html>
