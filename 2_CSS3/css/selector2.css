@@ -1,0 +1,29 @@
+/* CSS 파일 > 전체가 <style> 태그 내부인 셈 */
+
+/* 기본 속성 선택자 */
+/* div : 태그 선택자 */
+div[name = "name-1"] {
+  background-color: red;
+}
+
+p[test = "test"] {
+  color: blue;
+}
+
+[name = "name-2"] {
+  background-color: green;
+}
+
+/* 자식 선택자 */
+#parent-ul > li {
+  background-color: orange;
+}
+
+#parent-ul > li > span {
+  background-color: red;
+}
+
+/* 후손 선택자 (띄어쓰기 = 자손, 후손) */
+#parent-ul span {
+  color: blue;
+}
