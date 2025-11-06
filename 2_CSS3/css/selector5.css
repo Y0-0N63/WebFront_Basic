@@ -1,0 +1,41 @@
+*{
+  font-family: "pretendard";
+}
+
+/* only는 뒤에서 앞으로 해석 */
+#test1>p:only-child {
+  background-color: seagreen;
+}
+
+/* only-of는 앞에서 뒤로 해석 */
+#test2 > p:only-of-type {
+  background-color: red;;
+}
+
+#test3 > p:empty {
+  background-color: greenyellow;
+  height: 30px;
+}
+
+#test4-1, #test4-2, .test4-3 {
+  background-color: yellow;
+  color: red;
+}
+
+/* #test5-1 후손 중 클래스가 c5인 요소를 선택 */
+#test5-1 .c5 {
+  background-color: aqua;
+}
+
+/* #test5-2인 자식 중 클래스가 c5인 li 요소만 선택 */
+#test5-2 > li.c5 {
+  background-color: tomato;
+}
+
+.test6.c6 {
+  background-color: red;
+}
+
+/* .test6, .c6 {
+  background-color: red;
+} */
