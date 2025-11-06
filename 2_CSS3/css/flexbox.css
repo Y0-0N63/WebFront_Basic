@@ -1,3 +1,104 @@
 * {
   font-family: pretendard;
 }
+
+div{
+  border : 1px solid black;
+  box-sizing: border-box;
+  /* content + padding + border 합으로 width/height 지정 */
+}
+
+.item{
+  width: 75px;
+  height: 75px;
+}
+
+.item1{background-color: red;}
+.item2{background-color: orangered;}
+.item3{background-color: orange;}
+.item4{background-color: yellow;}
+.item5{background-color: yellowgreen;}
+.item6{background-color: green;}
+.item7{background-color: lightblue;}
+.item8{background-color: blue;}
+.item9{background-color: violet;}
+
+.flex-container {
+  height: 800px;
+
+  /* display : flex;
+  item(자식 태그)을 감싸는 요소(부모 태그)의 형식을 flexbox로 변경
+  > 내부 요소인 item들이 자동으로 정렬되며, 레이아웃을 쉽게 조정할 수 있음 
+  자동 정렬 > 가로/세로 정렬을 쉽게 조정 가능
+  공간 배분 > 요소 간 간격을 자동으로 조정
+  반응형 레이아웃 > 화면 크기에 따라 유연하게 조정 */
+  display: flex;
+
+  /* flex-direction(부모 전용 속성)
+  > 메인축의 방향과 시작 위치를 지정하는 속성
+  - row : 메인축이 행 방향으로(가로로) 설정됨(기본값)
+  - row-reverse : 행 방향으로 row와 반대 순서(뒤집어진 모양)
+  - column : 메인축이 열 방향으로(세로로) 설정됨
+    > 교차축이 행 방향으로 설정됨
+  - column-reverse : 행 방향으로 column 반대 순서(뒤집어진 모양)*/
+  flex-direction: row;
+
+  /* flex-wrap (부모 전용 속성)
+  > 내부 item들을 포장하는 속성
+  > item들이 강제로 한 줄에 배치할 것인지, 한 줄에서 벗어나 여러 줄로 배치할 것인지 지정
+  - nowrap : item을 한 줄로 배치(기본값)
+  - wrap : item을 여러 줄로 배치
+  - wrap-reverse : 여러 줄로 배치 + 순서 반대로 (시작 위치 반전) */
+  flex-wrap: nowrap;
+
+  /* justify-content (부모 전용 속성)
+  > 메인축 방향으로 item의 정렬 방법을 조정함
+  - flex-start : 메인축 방향으로 앞에서부터 정렬(기본값)
+  - flex-end : 메인축 방향으로 뒤에 붙어서 정렬
+    *row-reverse의 경우, 메인축에 변경을 주기 때문에 시작 위치가 반전됨!
+  - center : 메인축 방향으로 가운데 정렬
+  - space-between : 양끝 쪽을 붙인 상태에서 item들의 간격을 일정하게 정렬 
+  - space-around : 양끝은 조금, item 중간은 일정 간격으로 정렬
+  - space-evenly : item이 메인축 내에서 모두 동일한 간격을 가짐 */
+  justify-content: flex-start;
+
+  /* align-items (부모 전용 속성) 
+  > item들을 교차축 방향으로 정렬하는 방법을 지정하는 속성
+  - flex-start : 교차축 앞에서부터 정렬(기본값)
+  - center : 교차축 가운데 정렬
+  - flex-end : 끝에 붙어서 정렬 */
+  align-items: flex-start;
+}
+
+/* 부모 */
+#con {
+  width: 450px;
+  height: 450px;
+
+  display: flex;
+  /* 메인축 가운데 정렬 */
+  justify-content: center;
+  /* 교차축 가운데 정렬 */
+  align-items: center;
+}
+
+/* 자식 */
+#item-center {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+}
+
+/* order : 기본값 0;
+양수~음수 모두 설정 가능, 값이 작은 요소가 먼저 배치되고 큰 요소가 뒤에 배치됨 */
+.order:nth-child(1) {
+  order: 3;
+}
+
+.order:nth-child(2) {
+  order: 4;
+}
+
+.order:nth-child(3) {
+  order: 5;
+}
