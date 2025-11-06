@@ -49,5 +49,64 @@
   <span class="area5 block inline-block">5번 영역</span>
 
   <hr>
+
+  <h1>화면(영역) 분할</h1>
+  <h3>상하 2분할</h3>
+  <pre>
+준비물
+- 감싸는 영역 요소
+- 내부에 영역을 분할할 요소
+- display : block
+- 크기 단위(고정 px/가변 %)
+  </pre>
+
+  <!-- 감싸는 영역 요소 -->
+  <div id="container-1">
+    <!-- 내부에 영역을 분할할 요소 -->
+    <div></div>
+    <div></div>
+  </div>
+
+  <h3>상하 3분할</h3>
+  <pre>
+- 감싸는 영역 요소 (id = "container-2")
+- 화면 분할 내부 요소 (class = "div-2")
+- 분할 비율 > 20:30:50
+- 배경색 각각 자유롭게 지정
+  </pre>
+
+  <div id="container-2">
+    <div class="div-2"></div>
+    <div class="div-2"></div>
+    <div class="div-2"></div>
+  </div>
+
+  <hr>
+
+  <h3>좌우 2분할</h3>
+  <pre>
+- 감싸는 영역 요소
+- 내부 분할 요소
+- 크기 단위
+- display: inline-block
+
+*문제점*
+- 내부의 두 요소 사이의 개행을 한 칸으로 인식해 아래 방향으로 다음 요소가 출력됨
+
+  </pre>
+
+  <div id="container-3">
+    <div class="div-3"></div><div class="div-3"></div>
+  </div>
+
+  <h3>display : none</h3>
+  <pre>
+요소는 존재하지만 화면에는 보이지 않음 (투명 X)
+  *visibilitiy : hidden; (투명)
+  </pre>
+
+  <div class="div-4">test</div>
+  <div class="div-4" id="test4">test</div>
+  <div class="div-4">test</div>
 </body>
 </html>

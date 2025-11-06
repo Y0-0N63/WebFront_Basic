@@ -1,0 +1,92 @@
+*{
+  font-family: pretendard;
+  /* 편리성을 위해 기본적으로 적용하기 */
+  box-sizing: border-box;
+}
+
+.box {
+  /* width/height 속성은 기본적으로 content 영역의 크기를 지정하는 속성 */
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.border {
+  border: 10px solid red;
+}
+
+.padding {
+  padding: 30px
+}
+
+/* 서로 다른 요소의 margin이 겹칠 경우
+> 크기가 같으면 완전히 겹혀지고, 그렇지 않으면 더 큰 값으로 적용됨 */
+.margin {
+  margin: 50px;
+}
+
+#m1 {
+  margin: 100px;
+}
+
+/* 너비/높이 : 300px인 정사각형 만들기
+테두리 10px, 패딩 20px, 내용은 나머지 */
+
+/* 직접 계산한 경우 */
+/* #box-sizing {
+  border: 10px solid black;
+  padding: 20px;
+
+  width: 240px;
+  height: 240px;
+} */
+
+/* box-sizing 적용하기 */
+#box-sizing {
+  border: 10px solid black;
+  padding: 20px;
+
+  width: 300px;
+  height: 300px;
+
+  /* content 영역이 자동 계산됨
+  width/heigt 속성이 padding + border + content를 전부 합해진 셈 */
+  box-sizing: border-box;
+}
+
+.padding-test {
+  /* padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 100px; */
+
+ /* 값 1개 : 상하좌우
+    값 2개 : 상하, 좌우
+    값 3개 : 상, 좌우, 하
+    값 4개 : 상, 우, 하, 좌 (시계 방향)*/
+  padding: 30px 20px 10px 5px;
+}
+
+.border-test {
+  /* border 속성 : 상하좌우 방향을 별도로 지정할 수 없음 */
+  border-top : 3px solid black;
+  border-bottom : 5px dashed magenta;
+  border-left : 10px dotted blue;
+  border-right : 10px double orange;
+}
+
+.box-container {
+  border: 2px solid black;
+  width: 500px;
+  height: 300px;
+}
+
+.margin-auto {
+  /* margin-left: 200px; */
+  /* 좌우 요소간의 간격을 자동으로 지정하여 가운데 정렬 > margin-top을 무시하고 출력됨
+  상하좌우 동시에 지정하는 속성이기 때문에 top 부분에도 auto가 지정되어 이전의 값을 무시하고 새로 덮어쓰기
+  > margin:auto 아래에 top 기술하여 새롭게 덮어써주기 */
+  margin: auto;
+  margin-top: 100px;
+
+}
