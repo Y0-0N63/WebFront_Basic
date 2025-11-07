@@ -386,7 +386,8 @@ div{
 }
 
 .item-5-2-1{
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  flex-basis: calc(100%/3);
   background-color: skyblue;
 }
 
@@ -437,5 +438,5 @@ div{
 }
 
 .item-5-2-3:nth-child(2) {
-  flex-basis: 6cqh;
+  flex-basis: 60%;
 }
