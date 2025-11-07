@@ -1,0 +1,160 @@
+* {
+  font-family: pretendard;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+header {
+  height: 200px;
+  display: flex;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(3) {
+  flex-basis: 15%;
+}
+
+header > section:nth-of-type(2) {
+  flex-basis: 70%;
+}
+
+#home-logo {
+  width: 120px;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-area {
+  width: 500px;
+}
+
+.search-area fieldset {
+  border: 2px solid #455ba8;
+  border-radius: 5px;
+  padding: 2px;
+
+  display: flex;
+}
+
+#query {
+  flex-basis: 92%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0; /* none도 가능 */
+  /* 검색창을 눌렀을 때(포커싱 되었을 때) 아웃라인이 생기는 경우 */
+  outline: none;
+}
+
+#search-btn {
+  flex-basis: 8%;
+  cursor: pointer;
+  /* icon도 font로 인식됨 */
+  font-size: 20px;
+  border: 0;
+  /* transparent : 배경색 투명 */
+  background-color: transparent;
+  color: #455ba8;
+}
+
+nav {
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+nav > ul {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  flex-basis: 150px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+
+  display: block;
+  height: 100%;
+  line-height: 50px;
+  
+  border-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+nav a:hover {
+  background-color: #455ba8;
+  color: white;
+}
+
+.content {
+  display: flex;
+}
+
+/* 게시글 영역 */
+.content-1 {
+  flex-basis: 70%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 로그인 영역 */
+.content-2 {
+  flex-basis: 30%;
+}
+
+.content-item {
+  width: 90%;
+  border: 1px solid #bbb;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-item > div {
+  width: 100%;
+  height: 200px;
+}
+
+.content-item img {
+  width: 100%;
+  height: 100%;
+  /* object-fit : 이미지가 높이와 너비의 비율은 유지하고, 넘치는 부분은 잘라냄 */
+  object-fit: cover;
+}
+
+.content-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.content-item p {
+  /* 웹킷 전용 플렉스 박스 형태로 출력 설정(= 줄 수 제한 기능을 위한 준비) */
+  display: -webkit-box;
+  /* 텍스트를 최대 3줄까지만 출력 */
+  -webkit-line-clamp: 3;
+  /* 텍스트 방향을 세로 방향으로 줄 세우기 */
+  -webkit-box-orient: vertical;
+  /* 3줄 이후의 텍스트는 화면에서 보이지 않게 숨기기 */
+  overflow: hidden;
+}
