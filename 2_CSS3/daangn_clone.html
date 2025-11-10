@@ -15,16 +15,25 @@
       <nav>
         <!-- 당근 마켓 로고 -->
         <section class="logo-area">
-          <a href="#"><img src="https://i.namu.wiki/i/4kTJGvpYAXvbT44b-ePbMSkdNuwLCFEUCwWPrIcEYX1LFnemJhrYl9LZd8wWriY-ADdCS3QhPlHNsrlnnWSSfQ.svg"></a>
+          <a href="#"
+            ><img
+              src="https://i.namu.wiki/i/4kTJGvpYAXvbT44b-ePbMSkdNuwLCFEUCwWPrIcEYX1LFnemJhrYl9LZd8wWriY-ADdCS3QhPlHNsrlnnWSSfQ.svg"
+          /></a>
         </section>
 
         <!-- 중고거래, 부동산, 중고차, 알바, 동네업체, 동네생활, 모임 메뉴 -->
         <section class="menu-area">
           <ul>
             <li><a href="#">중고거래</a></li>
-            <li><a href="#">부동산<i class="fa-solid fa-chevron-down"></i></a></li>
-            <li><a href="#">중고차<i class="fa-solid fa-chevron-down"></i></a></li>
-            <li><a href="#">알바<i class="fa-solid fa-chevron-down"></i></a></li>
+            <li>
+              <a href="#">부동산<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">중고차<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">알바<i class="fa-solid fa-chevron-down"></i></a>
+            </li>
             <li><a href="#">동네업체</a></li>
             <li><a href="#">동네생활</a></li>
             <li><a href="#">모임</a></li>
@@ -70,7 +79,9 @@
                 autocomplete="off"
                 placeholder="검색어를 입력해주세요"
               />
-              <button id="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+              <button id="search-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </fieldset>
           </form>
 
@@ -100,6 +111,141 @@
         </section>
       </header>
 
+      <div class="content-title">
+        <div>홈 <i class="fa-solid fa-chevron-right"></i> 중고거래</div>
+        <div><h1>경기도 광주시 초월읍 중고거래</h1></div>
+      </div>
+
+      <section class="content">
+        <section class="content-side">
+          <!-- 필터, 위치, 카테고리, 가격  -->
+          <section class="content-filter">
+            <div>
+              <h2>필터</h2>
+              <a href="#">초기화</a>
+            </div>
+            <label><input type="checkbox" /> 거래 가능만 보기 </label>
+          </section>
+
+          <section class="content-location">
+            <h3>위치</h3>
+            <span>경기도 광주시</span>
+            <label><input type="checkbox" name="check-location" />초월읍</label>
+            <label><input type="checkbox" name="check-location" />오포읍</label>
+            <label><input type="checkbox" name="check-location" />태전동</label>
+            <label
+              ><input type="checkbox" name="check-location" />곤지암읍</label
+            >
+            <label><input type="checkbox" name="check-location" />경안동</label>
+            <label><input type="checkbox" name="check-location" />송정동</label>
+            <a href="#">더보기</a>
+          </section>
+
+          <section class="content-category">
+            <h3>카테고리</h3>
+            <label
+              ><input type="checkbox" name="check-category" />디지털기기</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />생활가전</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+              />가구/인테리어</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />생활/주방</label
+            >
+            <label><input type="checkbox" name="check-category" />유아동</label>
+            <label
+              ><input type="checkbox" name="check-category" />유아도서</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />여성의류</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />여성잡화</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+              />남성패션/잡화</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />뷰티/미용</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />스포츠/레저</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+              />취미/게임/음반</label
+            >
+            <label><input type="checkbox" name="check-category" />도서</label>
+            <label
+              ><input type="checkbox" name="check-category" />티켓/교환권</label
+            >
+            <label
+              ><input type="checkbox" name="check-category" />가공식품</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+              />건강기능식품</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+              />반려동물용품</label
+            >
+            <label><input type="checkbox" name="check-category" />식물</label>
+            <label
+              ><input type="checkbox" name="check-category" />기타
+              중고물품</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="check-category"
+                style="margin-bottom: 20px"
+              />삽니다</label
+            >
+          </section>
+
+          <section class="content-price">
+            <h3>가격</h3>
+          </section>
+
+          <!-- 물품 소개 -->
+          <section class="content-product">
+            <!-- 더 보기  버튼 -->
+            <button><a href="#">나눔</a></button>
+            <button><a href="#">5,000원 이하</a></button>
+            <button><a href="#">10,000원 이하</a></button>
+            <button><a href="#">20,000원 이하</a></button>
+            <div>
+              <input type="text" name="min-price" placeholder="0" />
+              -
+              <input type="text" name="max-price" placeholder="최대" />
+            </div>
+
+            <a href="#">적용하기</a>
+          </section>
+        </section>
+
+        <section class="content-main">
+          <img
+            src="https://img.kr.gcp-karroter.net/origin/article/202511/70ea22c3ef2e28429915157bf5af2c2e2b1e496b55bccb9f65e3f0a00bf2da8c_0.webp?q=82&s=300x300&t=crop&f=webp"
+          />
+        </section>
+      </section>
     </main>
   </body>
 </html>

@@ -27,7 +27,7 @@ header {
 }
 
 .select-region > div:first-child {
-  flex-basis: 60%;
+  flex-basis: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +40,10 @@ header {
   border-radius: 30px;
 
   cursor: pointer;
+}
+
+.select-region > div:last-child {
+  flex-basis: 40%;
 }
 
 .search-area {
@@ -199,4 +203,146 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+}
+
+.content-title > div:first-child {
+  margin: 15px 0px;
+}
+
+.content-title h1 {
+  margin: 0px;
+}
+
+.content {
+  margin-top: 20px;
+  display: flex;
+}
+
+.content-side {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.content-side h3 {
+  margin: 15px 0;
+}
+.content-side div {
+  display: flex;
+}
+
+.content-filter {
+  flex-basis : 5%;
+  
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.content-filter div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-filter h2 {
+  margin: 0;
+}
+
+.content-filter a {
+  color: #888b93;
+}
+
+.content-filter label {
+  margin: 20px 0px;
+}
+
+.content-filter [type="checkbox"], .content-location [type="checkbox"]
+, .content-category [type="checkbox"] {
+  accent-color: #e26f2e;
+}
+
+.content-location {
+  flex-basis: 10%;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-location label, .content-category label {
+  margin-bottom: 5px;
+}
+
+.content-location span {
+  margin-bottom: 15px;
+}
+
+.content-location a {
+  margin: 15px 0 20px;
+  color: #c65725;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content-category {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-product button {
+  display: inline-block;
+  width: auto;
+  height: auto;
+
+  background-color: transparent;
+  border: 1px solid #dddee2;
+  border-radius: 20px;
+  
+  margin: 5px 0;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.content-product > button > a {
+  color: black;
+  text-decoration: none;
+}
+
+.content-product div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.content-product input {
+  margin: 10px 0;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #888b93;
+  border-radius: 5px;
+}
+
+.content-product > a {
+  font-size: 14px;
+  color: #585d6b;
+}
+
+.content-price a {
+  flex-basis: 25%;
+}
+
+.content-main {
+  flex-basis: 80%;
 }
