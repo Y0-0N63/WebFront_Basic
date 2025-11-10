@@ -1,3 +1,129 @@
 * {
   font-family: pretendard;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+header {
+  margin-top: 15px;
+  height: 80px;
+  display: flex;
+
+  gap: 20px;
+}
+
+.select-region {
+  flex-basis: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-region > div:first-child {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: 2c3037;
+  background-color: #f3f4f5;
+  border-radius: 30px;
+
+  cursor: pointer;
+}
+
+.search-area {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+form[name="search-form"] {
+  flex-basis: 60%;
+  display: flex;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: #585d6b;
+
+  border: 1px solid #dddee2;
+  border-radius: 35px;
+}
+
+form[name="search-form"] > span {
+  flex-basis: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form[name="search-form"] > fieldset {
+  border: none;
+  width: 90%;
+  display: flex;
+  padding: 0px;
+  outline: none;
+}
+
+#query {
+  border: none;
+  width: 95%;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#query::-webkit-input-placeholder {
+  font-family: 'Pretendard';
+  font-size: 18px;
+}
+
+#search-btn {
+  border: none;
+  background-color: transparent;
+}
+
+#search-btn > i {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #2c3037;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.search-area > div:last-child {
+  flex: 40%;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-area > div:last-child a {
+  color: black;
+  text-decoration: none;
+}
+
+/* 개별 span 요소에 오른쪽 마진을 부여 */
+.search-area > div:last-child > div > span {
+  margin-right: 10px; /* 원하는 가로 간격 */
+}
+
+.search-area > div:last-child > span {
+  color: #888b93;
 }

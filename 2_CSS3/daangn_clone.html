@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>당근 마켓 클론 코딩</title>
-  <link href="./css/daangn_clone.css" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <header>
-      <section></section>
-    </header>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>당근 마켓 클론 코딩</title>
+    <link href="./css/daangn_clone.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/646c906e72.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <!-- 지역 선택 -->
+        <section class="select-region">
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            초월읍
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <!-- 높이 맞추기용 공백 -->
+          <div></div>
+        </section>
+
+        <!-- 검색어 입력, 인기 검색어 -->
+        <section class="search-area">
+          <!-- 검색어 입력창 -->
+          <form action="#" method="get" name="search-form">
+            <!-- 거래 종류 선택 -->
+            <span>
+              <span>중고거래</span>
+              <i class="fa-solid fa-caret-down"></i>
+            </span>
+
+            <fieldset>
+              <!-- autocomplete : input에서 자동 완성 기능을 사용할지 여부를 명시
+            > on으로 명시 : 브라우저는 사용자가 이전에 입력했던 값들을 기반으로 사용자가 입력한 값과 비슷한 값들을 드롭다운 옵션으로 보여줌 -->
+              <input
+                type="text"
+                id="query"
+                name="query"
+                autocomplete="off"
+                placeholder="검색어를 입력해주세요"
+              />
+              <button id="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </fieldset>
+          </form>
+
+          <!-- 인기 검색어 나열 -->
+          <div>
+            <span>인기 검색어</span>
+            <div>
+              <span><a href="#">에어컨</a></span>
+              <span><a href="#">자전거</a></span>
+              <span><a href="#">아이폰</a></span>
+              <span><a href="#">컴퓨터</a></span>
+              <span><a href="#">냉장고</a></span>
+              <span><a href="#">굿즈</a></span>
+              <span><a href="#">플스</a></span>
+              <span><a href="#">닌텐도</a></span>
+              <span><a href="#">다이슨</a></span>
+              <span><a href="#">캠핑</a></span>
+              <span><a href="#">포토카드</a></span>
+              <span><a href="#">에어팟</a></span>
+              <span><a href="#">버즈</a></span>
+              <span><a href="#">다이소</a></span>
+              <span><a href="#">노트북</a></span>
+              <span><a href="#">레고</a></span>
+              <span><a href="#">의자</a></span>
+            </div>
+          </div>
+        </section>
+      </header>
+    </main>
+  </body>
 </html>
