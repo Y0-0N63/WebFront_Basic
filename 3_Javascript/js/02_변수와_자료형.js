@@ -138,3 +138,82 @@ console.log(x);
 // let/const는 var보다 예측 가능한 코드를 작성할 수 있음! > 지향됨
 
 // JS 자료형 확인하기
+// typeof 연산자 : 변수/값의 자료형을 출력하는 연산자
+let undef; // 변수 선언
+// undef :  undefined undefined
+// undefiend : 정의되지 않은 변수/값이 아직 대입되지 않았다
+console.log("undef : ", undef, typeof undef);
+
+// string(문자열) : "" 또는 ''로 작성된 값
+const userName = "홍길동";
+// userName :  홍길동 string
+console.log("userName : ", userName, typeof userName);
+
+const phone = '01012341234';
+// phone :  01012341234 string
+console.log("phone : ", phone, typeof phone);
+
+const gender = 'M';
+// gender :  M string
+console.log("gender : ", gender, typeof gender);
+
+// number (정수, 실수, 양수, 음수, 0 등 모든 숫자)
+const age = 25;
+const height = 150.5;
+const eyesight = -5;
+
+// age :  25 number
+console.log("age : ", age, typeof age);
+// height :  150.5 number
+console.log("height : ", height, typeof height);
+// eyesight :  -5 number
+console.log("eyesight : ", eyesight, typeof eyesight);
+
+// boolean (논리값 true/false)
+const isTrue = true;
+const isFalse = false;
+// isTrue :  true boolean
+console.log("isTrue : ", isTrue, typeof isTrue);
+// isFalse :  false boolean
+console.log("isFalse : ", isFalse, typeof isFalse);
+
+// object (객체) : 값을 여러 개 저장할 수 있는 형태
+// 1) 배열(Array) : 여러 값이 나열되어 있는 것의 묶음
+const numbers = [10, 20, 30];
+// numbers :  (3) [10, 20, 30]0: 101: 202: 30length: 3[[Prototype]]: Array(0) object
+console.log("numbers : ", numbers, typeof numbers);
+// numbers 배열 값 중 0번째 :  10 number
+console.log("numbers 배열 값 중 0번째 : ", numbers[0], typeof numbers[0]);
+
+// JS에서의 배열은 값 추가 및 삭제 가능 > 크기가 고정되지 않고 필요에 따라 자동으로 늘어나거나 줄어듦
+// 2) JS 객체 : 값을 K:V(MAP) 형식으로 여러 개 저장하는 형태 { K:V, K:V, K:V ... }
+// K(Key) : 값을 구분하는 이름 (변수명과 비슷)
+// V(Value) : K에 대응되는 값 (변수에 대입되는 값과 비슷)
+const user = { id : "user01", pw : "pass01", userName : "홍길동", age : 20 };
+// user :  {id: 'user01', pw: 'pass01', userName: '홍길동', age: 20} object
+console.log("user : ", user, typeof user);
+
+// 객체에 존재하는 값을 하나씩 얻어오기
+// 방법 1 : 변수명['key']   --> 아이디 작성할 때 문자열로 작성
+// user01
+console.log(user['id']);
+// 방법 2 : 변수명.key
+// user01 pass01 홍길동 20
+console.log(user.id, user.pw, user.userName, user.age);
+
+// 함수 (function)
+
+// 작성법
+// const 변수명 = function() {};   <-- 변수명이 함수의 이름이 됨 (익명함수)
+const sumFn = function(a, b) { return a + b };
+/*
+function sumFn(a, b) {
+  return a + b
+}
+ */
+
+console.log(typeof sumFn) // function
+console.log(sumFn(3, 5)); // 8
+
+// null
+console.log(typeof null); // object
