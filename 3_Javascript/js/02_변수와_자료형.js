@@ -116,4 +116,25 @@ function example2() { // 함수 블록
 
 example2();
 
-// 
+// 1. var의 호이스팅 : var로 선언된 변수는 선언만 해당 스코프의 최상단으로 호이스팅됨
+// 초기화는 원래 코드 위치에서 수행
+
+// 내부적으로 var a;만 선언된 상태이기 때문에 에러 발생 대신 undefined
+// > 호이스팅 되어 var a; 선언부가 최상단으로 올라가 > 선언은 되었으나 a에 값이 대입되지 않은 상태로 인식됨
+console.log(a); // undefined
+var a = 10;
+console.log(a);
+
+// 2. let/const의 호이스팅 : let/const로 선언된 변수는 선언만 해당 스코프의 최상단으로 호이스팅됨
+// var와 달리, let/const로 선언된 변수는 초기화가 이루어지기 전에는 사용될 수 없음
+
+// 내부적으로 letx; 선언은 끌어올려진 상태(x의 선언이 호이스팅된 상태)
+// 그러나 TDZ 존에 놓여 초기화 전까지 접근 불가
+//  = JS에서 let/const 키워드로 선언된 변수가 초기화되기 전까지 접근할 수 없는 구간에 놓여짐
+// TDZ(Temporal Dead Zone) : 코드 실행 과정에서 특정 시점까지 변수가 접근 불가한 상태를 의미
+// console.log(x); // Uncaught ReferenceError: Cannot access 'x' before initialization
+let x = 50;
+console.log(x);
+// let/const는 var보다 예측 가능한 코드를 작성할 수 있음! > 지향됨
+
+// JS 자료형 확인하기
