@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>크기, 색상, 내용 지정해서 등록하기</title>
+    <style>
+      .container {
+        width: 400px;
+      }
+
+      #inputSize {
+        width: 25px;
+      }
+
+      #inputColor {
+        width: 100px;
+      }
+
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>크기, 색상, 내용 지정해서 등록하기</h1>
+    <div class="container">
+      크기 : <input type="text" id="inputSize" /> px | 색상 :
+      <input type="text" id="inputColor" />
+      <button id="applyBtn">적용</button>
+      <hr />
+      
+      <textarea id="content" rows="7"></textarea>
+
+      <button id="registerBtn">등록</button>
+    </div>
+    
+    <script src="../js/크기_색상_내용_지정_등록.js"></script>
+  </body>
+</html>
