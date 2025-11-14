@@ -85,17 +85,16 @@
 // firstElement(arr);
 
 // 10. 배열을 매개변수로 받아 배열의 모든 숫자의 합과 평균을 객체 형태로 반환하는 함수를 선언 및 정의하고 호출하시오
-
-function printSumAll(arr) {
+function printSumAvg(array) {
   let sum = 0;
-  for(let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+  for(let temp of array) {
+    sum += temp;
   }
-  let avg = sum / arr.length;
+  let avg = sum / array.length;
   return {"합" : sum, "평균" : avg};
 }
 const arr = [1, 2, 3, 4, 5];
-printSumAll(arr);
+console.log(printSumAvg(arr));
 
 // 11. 숫자 두 개와 연산을 수행하는 함수를 매개변수로 받아, 두 숫자에 해당 연산을 적용한 결과를 반환하는 함수를 선언 및 정의하고 호출하시오
 
